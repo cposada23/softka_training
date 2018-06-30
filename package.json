@@ -1,0 +1,29 @@
+{
+  "name": "sofka_training",
+  "version": "1.0.0",
+  "description": "Crear un programa que imprime números en estilos de una pantalla LCD",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "nyc ava test/ --verbose",
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cposada23/sofka_training.git"
+  },
+  "author": "Camilo Posada Angel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cposada23/sofka_training/issues"
+  },
+  "homepage": "https://github.com/cposada23/sofka_training#readme",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "nyc": "^12.0.2",
+    "standard": "^11.0.1"
+  }
+}
