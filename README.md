@@ -4,7 +4,7 @@ Esta es la solución al ejercicio propuesto por **softka** en el cual se busca r
 
 ## Análisis
 ### entradas 
-- La variable de entrada sera un **String** que contiene dos números separados por una com.
+- La variable de entrada sera un **String** que contiene dos números separados por una coma.
 - El primer número es la variable **size** que representa el tamaño de la impresión, este debe ser un número entre **[1 - 10]**
 - El segundo sera la variable **number** que es el número a mostrar en la pantalla
 - Para terminar el programa se debe digitar ***0,0***
@@ -19,7 +19,7 @@ Esta es la solución al ejercicio propuesto por **softka** en el cual se busca r
 La tecnologia escogida es ***Node JS***, en la versión ***9.10.1***
 > Para correr el programa principal no es necesario instalar ningún modulo externo a los que ya vienen con Node JS
 
-Solo hay que ejecutar el siguiente comando **`npm start`** y ingresar los números en el formato correcto (separados por comas), en caso de que se ingrese un número en el formato incorrecto la aplicación no fallará, solo mostrará un mensaje de error y el usuario podrá seguir escribiendo números hasta que este ingrese ***0,0***, lo que terminará el programa
+Solo hay que ejecutar el siguiente comando **`npm start`** e ingresar los números en el formato correcto (separados por comas), en caso de que se ingrese un número en el formato incorrecto la aplicación no fallará, solo mostrará un mensaje de error y el usuario podrá seguir escribiendo números hasta que este ingrese ***0,0***, lo que terminará el programa
 
 ## Pruebas
 Para ejecutar el resultado de las pruebas unitarias escritas se debe ejecutar el siguiente comando en la consola **`npm test`**

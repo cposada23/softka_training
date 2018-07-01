@@ -1,12 +1,13 @@
 const ava = require('ava')
 const extractModule = require('../modulos/extract')
-
+const numbers = require('../modulos/numbers')
+const fs = require('fs')
 
 ava('make it pass', t => {
   t.pass()
 })
 
-ava('it should return and object cotaining the size and the number to be displayed on the screen', t => {
+ava('it should return and object containing the size and the number to be displayed on the screen', t => {
   let strNumber = '9,3'
   let expected = {
     size: '9',
@@ -24,10 +25,9 @@ ava('it should return and object cotaining the size and the number to be display
   object = extractModule.extract(strNumber)
 
   t.deepEqual(expected, object)
-
 })
 
-ava('it should return an empty object {} when the size is lower than 1 or greater than 10', t=> {
+ava('it should return an empty object {} when the size is lower than 1 or greater than 10', t => {
   let strNumber = '10,3'
   let expected = {
     size: '10',
@@ -56,4 +56,25 @@ ava('it should return an empty object {} when the size is lower than 1 or greate
   object = extractModule.extract(strNumber)
 
   t.deepEqual(expected, object)
+})
+
+ava('it should return the string representation of the number one with size 2', t => {
+ 
+  let strNumberOne = numbers.print('1', '2')
+  const expected = '     \n   | \n   | \n     \n   | \n   | \n     \n'
+  t.is(strNumberOne, expected)
+})
+
+ava('it should return the string representation of the number eleven with size 2', t => {
+ 
+  let strNumberEleven = numbers.print('11', '2')
+  const expected = '          \n   |    | \n   |    | \n          \n   |    | \n   |    | \n          \n'
+  t.is(strNumberEleven, expected)
+})
+
+ava('it should return the string representation of the number seventeen with size 2', t => {
+ 
+  let strNumberSeventeen = numbers.print('17', '2')
+  const expected = '      --  \n   |    | \n   |    | \n          \n   |    | \n   |    | \n          \n'
+  t.is(strNumberSeventeen, expected)
 })
